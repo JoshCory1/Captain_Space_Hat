@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: New Question4
   m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
-  question: "As you reenter the station the first room you come across  has three
-    women siting inside a bull frog alien, a human woman and a conspectuses looking
-    one that may or not be a guard in a dress. \nWitch one will you take with you."
+  question: You did it the computer on the transport took you right by were the princess
+    is but is she in the gardens the library training room or in her bedroom.
+  answers:
+  - 'gardens '
+  - library
+  - training room
+  - bedroom
+  correctAswerIndex: 3

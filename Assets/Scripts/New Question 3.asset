@@ -12,5 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: New Question 3
   m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
-  question: You find your self in a shuttle dock with 4 short range ships in it a
-    red, blue, yellow and green
+  question: "You escape through the door at the end space guards right on your heals.
+    \nYou manage to bar the door behind you but it wont hold them for long.\nOnce
+    again  you have four options (humm weird).  You are in a big room there are three
+    doors.\nthere is also a alien toad looking thing with a big mouth full of teeth,
+    he says (because course it can talk). jump in to my mouth I will hide you from
+    them."
+  answers:
+  - door 1
+  - door 2
+  - door 3
+  - Jump in to the toads mouth
+  correctAswerIndex: 0

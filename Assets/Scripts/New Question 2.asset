@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: New Question 2
   m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
-  question: 'you enter another hallway.
-
-    You see an alien looking creature in
-    front of you that look much like a giant bull frog.
-
-    It tells you to hop
-    in to its mouth and it will hide you, there is also a door behind it and tow
-    hatches on the ground'
+  question: you enter a hall two doors along the halls on either side. a door, at
+    the end the hall is a door. on either side seem to be emitting noise. sounds
+    like many foot falls do you go through one of the doors or wait and try and make
+    friends.
+  answers:
+  - 'right door '
+  - left door
+  - end door
+  - wait
+  correctAswerIndex: 2

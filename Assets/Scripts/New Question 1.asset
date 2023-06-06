@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: New Question 1
   m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
-  question: 'You board the space station looking for princess  nebula next ruler
-    of sector five upon entering you are immediately chased but some rather grumpy
-    looking guards.
-
-    You are walking down a long hall way you see three doors 
-    2 on your right 1 on your left witch 1 do pick door 1, 2 or 3'
+  question: You enter the space station from the the dock from your ship. there ar
+    three paths to take. the door in front of you, one to the right, one to the left
+    and the maintenance hatch in the floor.
+  answers:
+  - front door
+  - 'left door '
+  - right door
+  - hatch
+  correctAswerIndex: 3
