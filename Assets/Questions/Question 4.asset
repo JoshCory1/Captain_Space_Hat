@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: New Question 5
-  m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
+  m_Script: {fileID: 11500000, guid: 311c28f6573ba9e5f9328529631c9be5, type: 3}
+  m_Name: Question 4
+  m_EditorClassIdentifier: 
   question: 'Finely you enter a hanger with multiple ships maybe you can get a lead
     on the guards by taking a ship to  a different place on the station. If one of
     the ships have a working on board computer maybe u can use it to find out were
@@ -21,12 +21,10 @@ MonoBehaviour:
     it four. junky looking ship one and two a space fighter and last but not least
 
     a
-    luxury transport.
-
-'
+    luxury transport.'
   answers:
-  - junk 1
-  - junk 2
+  - junk ship 1
+  - junk ship 2
   - fighter
   - transport
   correctAswerIndex: 3

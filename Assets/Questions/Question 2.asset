@@ -9,16 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: New Question 2
-  m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
+  m_Script: {fileID: 11500000, guid: 311c28f6573ba9e5f9328529631c9be5, type: 3}
+  m_Name: Question 2
+  m_EditorClassIdentifier: 
   question: you enter a hall two doors along the halls on either side. a door, at
     the end the hall is a door. on either side seem to be emitting noise. sounds
     like many foot falls do you go through one of the doors or wait and try and make
     friends.
   answers:
-  - 'right door '
+  - right door
   - left door
-  - end door
+  - front door
   - wait
   correctAswerIndex: 2

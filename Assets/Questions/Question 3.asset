@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: New Question 3
-  m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
+  m_Script: {fileID: 11500000, guid: 311c28f6573ba9e5f9328529631c9be5, type: 3}
+  m_Name: Question 3
+  m_EditorClassIdentifier: 
   question: "You escape through the door at the end space guards right on your heals.
     \nYou manage to bar the door behind you but it wont hold them for long.\nOnce
     again  you have four options (humm weird).  You are in a big room there are three
@@ -19,8 +19,8 @@ MonoBehaviour:
     he says (because course it can talk). jump in to my mouth I will hide you from
     them."
   answers:
-  - door 1
-  - door 2
-  - door 3
-  - Jump in to the toads mouth
-  correctAswerIndex: 0
+  - right door
+  - left door
+  - front door
+  - toad
+  correctAswerIndex: 2

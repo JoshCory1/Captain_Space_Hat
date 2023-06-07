@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: New Question4
-  m_EditorClassIdentifier: Assembly-CSharp::QuestionSO
+  m_Script: {fileID: 11500000, guid: 311c28f6573ba9e5f9328529631c9be5, type: 3}
+  m_Name: Question 5
+  m_EditorClassIdentifier: 
   question: You did it the computer on the transport took you right by were the princess
     is but is she in the gardens the library training room or in her bedroom.
   answers:
-  - 'gardens '
+  - gardens
   - library
   - training room
   - bedroom
