@@ -6,43 +6,71 @@ using UnityEngine.UI;
 
 public class Quiz : MonoBehaviour
 {
+    [Header("Questons")]
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] QuestionSO question;
+    [Header("Answers")]
     [SerializeField] GameObject[] answerButtons;
     int correctAnswerIndex;
+    bool hasAnswerdEarly;
+    [Header("Sprites")]
     [SerializeField] Sprite correctAnswerSprite;
     [SerializeField] Sprite defaultAnswerSprite;
+    [Header("Timer")]
+    [SerializeField] Image timerImage;
+
+    Timer timer;
     void Start() 
     {
-        displayNextQuestion();
-        //DisplayQuestions();
+        timer = FindObjectOfType<Timer>();
+        //displayNextQuestion();
+        DisplayQuestions();
+    }
+    private void Update() 
+    {
+        timerImage.fillAmount = timer.fillFraction;
+        if(timer.loadNextQuestion)
+        {
+            hasAnswerdEarly = false;
+            displayNextQuestion();
+            timer.loadNextQuestion = false;
+        } 
+        else if (!hasAnswerdEarly && !timer.isAnsweringQuestion)
+        {
+            displayAnswer(-1);
+            setAnswerButtons(false);
+        }
     }
     Image buttonImage;
 
      public void OnAnswerSelected(int index)
 
-        {
-            
-            if(index == question.GetCorrectAswerIndex())
-            {
-                questionText.text = "Correct";
-                buttonImage = answerButtons[index].GetComponent<Image>();
-                buttonImage.sprite = correctAnswerSprite;
-                setAnswerButtons(false);
-                
-            }
-            else
-            {
-                correctAnswerIndex = question.GetCorrectAswerIndex();
-                string correctAnswer = question.GetAnswer(correctAnswerIndex);
-                questionText.text = "really really really. you die in a blase of blaster fire;\n" + correctAnswer;
-                buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
-                buttonImage.sprite = correctAnswerSprite;
-                setAnswerButtons(false);
+    {
+        hasAnswerdEarly = true;
+        displayAnswer(index);
+        setAnswerButtons(false);
+        timer.CancelTimer();
+    }
 
-            }
+    private void displayAnswer(int index)
+    {
+        if (index == question.GetCorrectAswerIndex())
+        {
+            questionText.text = "Correct";
+            buttonImage = answerButtons[index].GetComponent<Image>();
+            buttonImage.sprite = correctAnswerSprite;
         }
-        void displayNextQuestion()
+        else
+        {
+            correctAnswerIndex = question.GetCorrectAswerIndex();
+            string correctAnswer = question.GetAnswer(correctAnswerIndex);
+            questionText.text = "really really really. you die in a blase of blaster fire;\n" + correctAnswer;
+            buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
+            buttonImage.sprite = correctAnswerSprite;
+        }
+    }
+
+    void displayNextQuestion()
         {
             setAnswerButtons(true);
             SetDefaultSprite();

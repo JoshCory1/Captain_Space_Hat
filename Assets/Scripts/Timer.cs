@@ -5,38 +5,55 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] float timeToCompleatQuestion = 30f;
+    [SerializeField] float timeToCompleteQuestion = 30f;
     [SerializeField] float timeToShowCorrectAnswer = 10f;
 
-    public bool isAnsweringQuestion = false;
+    public bool loadNextQuestion;
+    public float fillFraction;
 
-    float TimerValue;
+    public bool isAnsweringQuestion;
+    float timerValue;
 
-    // Update is called once per frame
     void Update()
     {
-        answerQuestionTimeer();
-        updateTimer();
+        UpdateTimer();
     }
 
-    private void answerQuestionTimeer()
+    public void CancelTimer()
     {
-        if(TimerValue <= 0 && isAnsweringQuestion)
-        {
-            isAnsweringQuestion = false;
-            TimerValue = timeToShowCorrectAnswer;
-        }
-
+        timerValue = 0;
     }
 
-    void updateTimer()
+    void UpdateTimer()
     {
-        TimerValue -= Time.deltaTime;
-        if(TimerValue <= 0 && !isAnsweringQuestion)
+        timerValue -= Time.deltaTime;
+
+        if(isAnsweringQuestion)
         {
-            isAnsweringQuestion = true;
-            TimerValue = timeToCompleatQuestion;
+            if(timerValue > 0)
+            {
+                fillFraction = timerValue / timeToCompleteQuestion;
+            }
+            else
+            {
+                isAnsweringQuestion = false;
+                timerValue = timeToShowCorrectAnswer;
+            }
         }
-        Debug.Log(TimerValue);
+        else
+        {
+            if(timerValue > 0)
+            {
+                fillFraction = timerValue / timeToShowCorrectAnswer;
+            }
+            else
+            {
+                isAnsweringQuestion = true;
+                timerValue = timeToCompleteQuestion;
+                loadNextQuestion = true;
+            }
+            Debug.Log(isAnsweringQuestion + ": " + timerValue + "=" + fillFraction);
+        }
     }
+
 }
